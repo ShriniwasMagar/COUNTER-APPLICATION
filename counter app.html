@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+body > * {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 4rem;
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+div {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:first-child {
+    background: #22c55e;
+    color: white;
+}
+
+button:nth-child(2) {
+    background: #f59e0b;
+    color: white;
+}
+
+button:last-child {
+    background: #ef4444;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Count App</h1>
+
+    <h2 id="countId">0</h2>
+
+    <div>
+        <button onclick="inc()">+</button>
+        <button onclick="reset()">RESET</button>
+        <button onclick="dec()">-</button>
+    </div>
+</div>
+
+    
+<script>
+    let count = 0;
+
+    function update(){
+        document.getElementById("countId").innerText = count;
+    }
+
+    function inc(){
+        count++;
+        update()
+    }
+
+    function dec(){
+        count--;
+        update()
+    }
+
+    function  reset(){
+        count = 0;
+        update()
+    }
+
+
+
+</script>
+</body>
+</html>
